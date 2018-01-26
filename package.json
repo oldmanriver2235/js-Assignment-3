@@ -1,0 +1,45 @@
+{
+  "name": "js-assignment-promises",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wmarttala/js-assignment-promises.git",
+  "author": "Will Marttala <wmarttala123@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "babel src -d lib",
+    "start": "node lib/index.js",
+    "pretest": "babel src -d lib",
+    "test": "mocha lib/test.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-fs": "^2.0.0",
+    "mocha": "^5.0.0",
+    "sinon": "^4.1.6",
+    "standard": "^10.0.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          },
+          "useBuiltIns": true
+        }
+      ],
+      "stage-0"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
