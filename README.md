@@ -1,0 +1,2 @@
+# js-assignment-promises
+In the assignment, students are tasked with converting their ```readFile``` and ```writeFile``` functions from using callbacks to Promises. Students will also add another more complex function ```createQuestions``` which takes an object which has question numbers and choices as keys and returns an array of question objects which each contain a question and its corresponding choices.
