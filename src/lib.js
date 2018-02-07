@@ -1,6 +1,6 @@
-// TODO update readFile() to use Promises
+// TODO copy readFile() which uses Promises
 
-// TODO update writeFile() to use Promises
+// TODO copy writeFile() which uses Promises
 
 // TODO copy chooseRandom() from previous assignment
 

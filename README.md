@@ -1,28 +1,36 @@
-# Promises Assignment
+# CreateQuestions Assignment
 
 ---
 
-In the assignment, students are tasked with converting their ```readFile``` and ```writeFile``` functions from using callbacks to Promises. Along with updating these functions, students should update their test cases this time using [chai-as-promised](http://chaijs.com/plugins/chai-as-promised/). Students will also add another more complex function ```createQuestions``` which takes an object which has question numbers and choices as keys and returns an array of question objects which each contain a question and its corresponding choices.
+In this assignment, students will add another, more complex, function, ```createQuestions```, which takes an object which has question numbers and choices as keys and returns an array of question objects which each contain a question and its corresponding choices. The object parameter should default to an empty object.
+The format of the array of questions objects is detailed in the Format section below.
 
 ## Goal
 
 ---
 
-To continue preparing students to adapt to new technologies and also continue challenging them with problems that require all of the information they've learned about JavaScript in this module.
+To challenge students to think more functionally through repetition of difficult problems which require them to think in ways they may not have before. Also, to have students practice using promises
+in combination with the custom library of functions they create.
 
 ## Tasks
 
 ---
 
-- [ ] Copy functions from the file i/o assignment into lib.js
-- [ ] Update the tests for readfile to use chai-as-promised
-- [ ] Update the readfile function to use promises
-- [ ] Update the tests for writefile to use chai-as-promised
-- [ ] Update the writefile function to use promises
-- [ ] Implement the createQuestions function based on the format below and provided tests
-- [ ] Ensure all tests are passing
+- [ ] Copy ```readFile``` and ```writeFile``` functions from promise exercise into ```lib.js```
+- [ ] Copy ```createPrompt``` and ```chooseRandom```functions into ```lib.js```
+- [ ] Implement the ```createQuestions``` function based on the format below and provided tests
+- [ ] Export all of the above functions from ```lib.js```
+- [ ] Import all of the above functions into ```index.js```
+- [ ] In ```index.js```, use ```readFile``` to read the file ```createPrompt.json```
+- [ ] Pass the object read from ```createPrompt.json``` into ```createPrompt```
+- [ ] Pass the result of ```createPrompt``` into ```chooseRandom```
+- [ ] Save the result of ```chooseRandom``` to a file called ```cp_solutions.json```
+- [ ] Use ```readFile``` to read the file ```createQuestions.json```
+- [ ] Pass the object read in from ```createQuestions.json``` into your ```createQuestions``` function
+- [ ] Pass the result of ```createQuestions``` into ```chooseRandom```
+- [ ] Save the result of ```chooseRandom``` to a file named ```cq_solutions.json```
+- [ ] Ensure all tests are passing when you run the ```npm test``` command
 
-(OPTIONAL) Import your functions from lib.js into index.js and manually try them out. Practice reading and writing to files and calling chooseRandom, createPrompt, and createQuestions with various input.
 
 ### Format
 
