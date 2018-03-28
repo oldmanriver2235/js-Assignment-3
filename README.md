@@ -16,21 +16,22 @@ in combination with the custom library of functions they create.
 
 ---
 
-- [ ] Copy ```readFile``` and ```writeFile``` functions from promise exercise into ```lib.js```
 - [ ] Copy ```createPrompt``` and ```chooseRandom```functions into ```lib.js```
 - [ ] Implement the ```createQuestions``` function based on the format below and provided tests
 - [ ] Export all of the above functions from ```lib.js```
-- [ ] Import all of the above functions into ```index.js```
-- [ ] In ```index.js```, use ```readFile``` to read the file ```createPrompt.json```
-- [ ] Pass the object read from ```createPrompt.json``` into ```createPrompt```
-- [ ] Pass the result of ```createPrompt``` into ```chooseRandom```
-- [ ] Save the result of ```chooseRandom``` to a file called ```cp_solutions.json```
-- [ ] Use ```readFile``` to read the file ```createQuestions.json```
-- [ ] Pass the object read in from ```createQuestions.json``` into your ```createQuestions``` function
-- [ ] Pass the result of ```createQuestions``` into ```chooseRandom```
-- [ ] Save the result of ```chooseRandom``` to a file named ```cq_solutions.json```
 - [ ] Ensure all tests are passing when you run the ```npm test``` command
 
+### Optional Tasks (Not Graded)
+
+- [ ] Import all of your functions into ```index.js```
+- [ ] In ```index.js```, read the file ```createPrompt.json```
+- [ ] Pass the object read from ```createPrompt.json``` into your ```createPrompt``` function
+- [ ] Pass the result of yout ```createPrompt``` function into your ```chooseRandom``` function
+- [ ] Save the result of your ```chooseRandom``` function to a file called ```cp_solutions.json```
+- [ ] Read the file ```createQuestions.json```
+- [ ] Pass the object read in from ```createQuestions.json``` into your ```createQuestions``` function
+- [ ] Pass the result of your ```createQuestions``` function into  your ```chooseRandom``` function
+- [ ] Save the result of your ```chooseRandom``` function to a file named ```cq_solutions.json```
 
 ### Format
 
