@@ -16,7 +16,8 @@ in combination with the custom library of functions they create.
 
 ---
 
-- [ ] Copy ```createPrompt``` and ```chooseRandom```functions into ```lib.js```
+- [ ] Copy your ```chooseRandom``` function from the chooseRandom assignment into ```lib.js```
+- [ ] Implement ```createPrompt``` using the given format below and the given test cases
 - [ ] Implement the ```createQuestions``` function based on the format below and provided tests
 - [ ] Export all of the above functions from ```lib.js```
 - [ ] Ensure all tests are passing when you run the ```npm test``` command
@@ -33,7 +34,68 @@ in combination with the custom library of functions they create.
 - [ ] Pass the result of your ```createQuestions``` function into  your ```chooseRandom``` function
 - [ ] Save the result of your ```chooseRandom``` function to a file named ```cq_solutions.json```
 
-### Format
+### CreatePrompt Format
+
+---
+
+createPrompt should return an array of objects in the following format:
+
+``` javascript
+[
+  { // Questions are repeated numQuestion number of times
+    type: 'input',
+    name: `question-${(Question Number)}`,
+    message: `Enter question ${(Question Number)}`
+  },
+  { // Choices are repeated numChoices number of times for each question
+    type: 'input',
+    name: `question-${(Question Number)}-choice-${(Choice Number)}`,
+    message: `Enter answer choice ${(Choice Number)} for question ${(Question Number)}`
+  },
+  .
+  .
+  .
+]
+```
+
+Example of createPromt({ numQuestions: 2, numChoices: 2 }):
+
+``` javascript
+[
+  {
+    type: 'input',
+    name: `question-1`,
+    message: `Enter question 1`
+  },
+  {
+    type: 'input',
+    name: `question-1-choice-1`,
+    message: `Enter answer choice 1 for question 1`
+  },
+  {
+    type: 'input',
+    name: `question-1-choice-2`,
+    message: `Enter answer choice 2 for question 1`
+  },
+  {
+    type: 'input',
+    name: `question-2`,
+    message: `Enter question 2`
+  },
+  {
+    type: 'input',
+    name: `question-2-choice-1`,
+    message: `Enter answer choice 1 for question 2`
+  },
+  {
+    type: 'input',
+    name: `question-2-choice-2`,
+    message: `Enter answer choice 2 for question 2`
+  },
+]
+```
+
+### CreateQuestions Format
 
 ---
 
