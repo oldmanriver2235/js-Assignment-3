@@ -2,8 +2,7 @@
 
 ---
 
-In this assignment, students will add another, more complex, function, ```createQuestions```, which takes an object which has question numbers and choices as keys and returns an array of question objects which each contain a question and its corresponding choices. The object parameter should default to an empty object.
-The format of the array of questions objects is detailed in the Format section below.
+In this assignment, students are to add two more functions into their ```lib.js``` file. First, they will add a ```createPrompt``` function which expects an object with properties: ```numQuestions``` and ```numChoices``` and must return an array of objects in a specific format (listed in the CreatePrompt Format section below). The ```numQuestions``` parameter should have a default value of 1 and the ```numchoices``` parameter should have a default value of 2. Second, students will add ```createQuestions```, which takes an object which has question numbers and choices as keys and returns an array of question objects which each contain a question and its corresponding choices. The object parameter should default to an empty object. The format of the array of questions objects is detailed in the CreateQuestion Format section below.
 
 ## Goal
 
