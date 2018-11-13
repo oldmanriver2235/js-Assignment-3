@@ -1,5 +1,5 @@
 // TODO import readFile, writeFile, chooseRandom, createPrompt, and createQuestions
-
+import './lib'
 // TODO read in the file createPrompt.json, run the object read in through createPrompt,
 // pass the result of createPrompt to chooseRandom, and then save the result to
 // cp_solutions.json

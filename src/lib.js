@@ -44,18 +44,38 @@ export const createPrompt = (
   return array
 }
 
-export const createQuestions = value => {
+export const createQuestions = (questions = {}) => {
   let questionsArray = []
+  let currentQuestion = {}
 
-  if (value === undefined) {
+  if (questions === undefined || Object.keys(questions).length < 1) {
     return questionsArray
   }
 
-  let questions = (n, o) => ({
-    type: 'list',
-    name: `question-${n}`,
-    message: Question,
-    choices: [(Choice - 1)(Choice - 2)(Choice - 3)(Choice - 4)]
-  })
+  for (let [key, value] of Object.entries(questions)) {
+    // console.log(key, value)
+    if (key.match(/^question-([0-9]+)$/)) {
+      if (currentQuestion.name !== undefined) {
+        questionsArray.push(currentQuestion)
+      }
+      currentQuestion = { type: 'list', name: key, message: value, choices: [] }
+    } else if (key.match(new RegExp(`question-([0-9]+)-choice-([0-9]+)`))) {
+      currentQuestion.choices.push(value)
+    }
+  }
+  questionsArray.push(currentQuestion)
   return questionsArray
 }
+// 'question-1': 'Do you think you\'re ready for this?',
+//   'question-1-choice-1': 'Beyond ready!!!',
+//   'question-1-choice-2': 'Totally!'
+console.log(
+  createQuestions({
+    'question-1': "Do you think you're ready for this?",
+    'question-1-choice-1': 'Beyond ready!!!',
+    'question-1-choice-2': 'Totally!',
+    'question-2': 'Are you loving JS yet?',
+    'question-2-choice-1': "It's tubular!",
+    'question-2-choice-2': 'Way rad man!'
+  })
+)
